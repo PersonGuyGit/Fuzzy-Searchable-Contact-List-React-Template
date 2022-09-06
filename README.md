@@ -6,7 +6,7 @@
 2. Provide a data.json file for your companies contact data. Ensure that your data is strutured the same way as shown below.
 
 ```json
-
+[
     {
         "ID": 1,
         "lastName": "Nancy",
