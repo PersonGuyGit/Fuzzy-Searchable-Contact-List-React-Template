@@ -1,5 +1,6 @@
-# Getting Started
+This project, allows for small businesses to have a easy way to search for employees, without using a phonebook, Rolodex, or any other physical medium of storing contact information. The search is a "Fuzzy Search", which would allow for you to still find the desired contact, even if you make a few typos. You can search not just by name, but also by location and title! Feel free to use this for your company, as it is under a free MIT license. All I ask, is that you Star or Fork this repo; as a sign of support.
 
+# Getting Started
 
 1. Clone this repository
 
