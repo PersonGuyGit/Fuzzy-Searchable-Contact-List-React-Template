@@ -1,0 +1,23 @@
+.flex-gap {
+    display: inline-flex;
+    flex-wrap: row;
+    gap: 1rem;
+    padding: 2rem 0rem;
+  }
+
+  
+ @media screen and (min-width: 200px) and (max-width: 400px) {
+  .flex-gap {
+    min-width: 80vw;
+    flex-direction: column;
+    margin: auto !important;
+    flex-wrap: wrap !important;
+
+      /* Make it so that the dropdown list has the same width as other elements */
+  }
+
+  .dropdown {
+    margin: auto !important;
+  }
+
+} 

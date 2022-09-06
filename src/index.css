@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* You need these elements to make the background smooth as the page changes */
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  /* https://stackoverflow.com/a/72512537/14386721
+    Found the solution here to fix this issue; where it would make the background blocky
+  */background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 
 code {

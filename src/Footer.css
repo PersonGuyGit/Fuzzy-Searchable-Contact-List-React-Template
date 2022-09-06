@@ -1,0 +1,13 @@
+.footer {
+    position: relative !important;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 3rem;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .text {
+    color: white;
+  }
