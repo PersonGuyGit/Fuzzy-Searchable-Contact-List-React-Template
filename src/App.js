@@ -1,6 +1,5 @@
 import "./App.css";
-import Searchbar from "./Searchbar.js";
-import Footer from "./Footer.js";
+import Searchbar from "./components/Searchbar.js";
 import { useState } from "react";
 
 // Fuse is for the search bar
@@ -16,30 +15,32 @@ import posts from "./data.json";
 function App() {
   const [query, updateQuery] = useState("");
 
-  const fuse = new Fuse(posts, {
+  const options = {
     keys: [
       {
         name: "firstName",
-        weight: 0.5,
       },
       {
         name: "lastName",
-        weight: 0.7,
       },
       {
         name: "title",
-        weight: 0.1,
       },
       {
         name: "location",
-        weight: 0.1,
       },
       {
         name: "number",
-        weight: 0.1,
       },
     ],
-  });
+    threshold: 0.5,
+    distance: 100,
+    includeMatches: true,
+    findAllMatches: true,
+    useExtendedSearch: true,
+  };
+
+  const fuse = new Fuse(posts, options);
 
   const results = fuse.search(query);
 
@@ -53,37 +54,34 @@ function App() {
     <Router>
       {
         <div className="root-container">
-          <div className="centered-container">
-            <Searchbar searchQuery={query} setSearchQuery={onSearch} />
-          </div>
-
           <Container>
+            <Searchbar searchQuery={query} setSearchQuery={onSearch} />
             <Row>
               {postResults.map((posts, index) => (
                 // Do not forget to add the key (index) to the root of the map container
-                <Col key={index} xs={12} md={4} lg={3}>
+                <Col key={index} xs={12} md={4} lg={3} className="mb-3">
                   {/* Found that solution here:  https://stackoverflow.com/a/68041165/14386721*/}
 
-                  <Card className="card-object">
+                  <Card className="card-object h-100">
                     {/* <Card.Img src="https://via.placeholder.com/150x75" /> */}
                     <Card.Body>
-                      <Card.Title>
+                      <Card.Title className="card-title">
                         {posts.firstName + " " + posts.lastName}
                       </Card.Title>
-                      <Card.Subtitle className="card-object-subtitle">
-                        {posts.number}
+                      <Card.Subtitle>
+                        <i>{posts.title}</i>
                       </Card.Subtitle>
-                      <Card.Subtitle className="card-object-subtitle">
-                        {posts.location}
-                      </Card.Subtitle>
-                      <Card.Text>{posts.title}</Card.Text>
+                      <Card.Text className="card-object-subtitle">
+                        <strong>Phone:</strong> {posts.number}
+                        <br></br>
+                        <strong>Address:</strong> {posts.location}
+                      </Card.Text>
                     </Card.Body>
                   </Card>
                 </Col>
               ))}
             </Row>
           </Container>
-          <Footer />
         </div>
       }
     </Router>
