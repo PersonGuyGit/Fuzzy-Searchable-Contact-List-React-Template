@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Fuzzy-Searchable-Contact-List-React-Template/static/css/main.252f3e22.css",
+    "main.js": "/Fuzzy-Searchable-Contact-List-React-Template/static/js/main.6cc3d8e9.js",
+    "static/js/787.652d8a9d.chunk.js": "/Fuzzy-Searchable-Contact-List-React-Template/static/js/787.652d8a9d.chunk.js",
+    "index.html": "/Fuzzy-Searchable-Contact-List-React-Template/index.html",
+    "main.252f3e22.css.map": "/Fuzzy-Searchable-Contact-List-React-Template/static/css/main.252f3e22.css.map",
+    "main.6cc3d8e9.js.map": "/Fuzzy-Searchable-Contact-List-React-Template/static/js/main.6cc3d8e9.js.map",
+    "787.652d8a9d.chunk.js.map": "/Fuzzy-Searchable-Contact-List-React-Template/static/js/787.652d8a9d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.252f3e22.css",
+    "static/js/main.6cc3d8e9.js"
+  ]
+}
